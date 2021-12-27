@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29160A6827780C5A00A81EAE /* GBLAScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29160A6727780C5A00A81EAE /* GBLAScene.swift */; };
+		294F4575277905BB00977447 /* Bios Boot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 294F4574277905BB00977447 /* Bios Boot.wav */; };
+		294F457F277907BE00977447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F457E277907BE00977447 /* AppDelegate.swift */; };
+		294F4581277907BE00977447 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4580277907BE00977447 /* GameScene.sks */; };
+		294F4583277907BE00977447 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4582277907BE00977447 /* Actions.sks */; };
+		294F4585277907BE00977447 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F4584277907BE00977447 /* GameScene.swift */; };
+		294F4587277907BE00977447 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F4586277907BE00977447 /* GameViewController.swift */; };
+		294F458A277907BE00977447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294F4588277907BE00977447 /* Main.storyboard */; };
+		294F458C277907BE00977447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294F458B277907BE00977447 /* Assets.xcassets */; };
+		294F458F277907BE00977447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294F458D277907BE00977447 /* LaunchScreen.storyboard */; };
+		294F4593277907CD00977447 /* Bios Boot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 294F4574277905BB00977447 /* Bios Boot.wav */; };
+		294F459427790AE800977447 /* GBLAScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29160A6727780C5A00A81EAE /* GBLAScene.swift */; };
+		294F45962779115500977447 /* OilyCowScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F45952779115500977447 /* OilyCowScene.swift */; };
+		294F45972779115500977447 /* OilyCowScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F45952779115500977447 /* OilyCowScene.swift */; };
+		294F4599277970D400977447 /* OilyCow2Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4598277970D400977447 /* OilyCow2Scene.sks */; };
+		294F459A277970D400977447 /* OilyCow2Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4598277970D400977447 /* OilyCow2Scene.sks */; };
+		294F459C277970E400977447 /* OilyCow2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F459B277970E400977447 /* OilyCow2Scene.swift */; };
+		294F459D277970E400977447 /* OilyCow2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F459B277970E400977447 /* OilyCow2Scene.swift */; };
 		29A645182776EAA9009007C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A645172776EAA9009007C6 /* AppDelegate.swift */; };
 		29A6451A2776EAA9009007C6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A645192776EAA9009007C6 /* GameViewController.swift */; };
 		29A6451D2776EAA9009007C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A6451B2776EAA9009007C6 /* Main.storyboard */; };
@@ -17,6 +35,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29160A6727780C5A00A81EAE /* GBLAScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBLAScene.swift; sourceTree = "<group>"; };
+		294F4574277905BB00977447 /* Bios Boot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bios Boot.wav"; sourceTree = "<group>"; };
+		294F457C277907BE00977447 /* Sample SpriteKit Game tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample SpriteKit Game tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		294F457E277907BE00977447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		294F4580277907BE00977447 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		294F4582277907BE00977447 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		294F4584277907BE00977447 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		294F4586277907BE00977447 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		294F4589277907BE00977447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		294F458B277907BE00977447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		294F458E277907BE00977447 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		294F45952779115500977447 /* OilyCowScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilyCowScene.swift; sourceTree = "<group>"; };
+		294F4598277970D400977447 /* OilyCow2Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OilyCow2Scene.sks; sourceTree = "<group>"; };
+		294F459B277970E400977447 /* OilyCow2Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilyCow2Scene.swift; sourceTree = "<group>"; };
 		29A6450C2776EAA8009007C6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		29A6450D2776EAA8009007C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		29A6450E2776EAA8009007C6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -29,6 +61,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		294F4579277907BE00977447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A645112776EAA9009007C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,11 +78,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		294F4573277905A200977447 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				294F4574277905BB00977447 /* Bios Boot.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		294F45762779071C00977447 /* SKS */ = {
+			isa = PBXGroup;
+			children = (
+				29A6450C2776EAA8009007C6 /* Actions.sks */,
+				29A6450D2776EAA8009007C6 /* GameScene.sks */,
+				294F4598277970D400977447 /* OilyCow2Scene.sks */,
+			);
+			path = SKS;
+			sourceTree = "<group>";
+		};
+		294F45772779072A00977447 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				29160A6727780C5A00A81EAE /* GBLAScene.swift */,
+				29A6450E2776EAA8009007C6 /* GameScene.swift */,
+				294F45952779115500977447 /* OilyCowScene.swift */,
+				294F459B277970E400977447 /* OilyCow2Scene.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		294F457D277907BE00977447 /* Sample SpriteKit Game tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				294F457E277907BE00977447 /* AppDelegate.swift */,
+				294F4580277907BE00977447 /* GameScene.sks */,
+				294F4582277907BE00977447 /* Actions.sks */,
+				294F4584277907BE00977447 /* GameScene.swift */,
+				294F4586277907BE00977447 /* GameViewController.swift */,
+				294F4588277907BE00977447 /* Main.storyboard */,
+				294F458B277907BE00977447 /* Assets.xcassets */,
+				294F458D277907BE00977447 /* LaunchScreen.storyboard */,
+			);
+			path = "Sample SpriteKit Game tvOS";
+			sourceTree = "<group>";
+		};
 		29A645062776EAA8009007C6 = {
 			isa = PBXGroup;
 			children = (
 				29A6450B2776EAA8009007C6 /* Sample SpriteKit Game Shared */,
 				29A645162776EAA9009007C6 /* Sample SpriteKit Game macOS */,
+				294F457D277907BE00977447 /* Sample SpriteKit Game tvOS */,
 				29A645152776EAA9009007C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,9 +135,9 @@
 		29A6450B2776EAA8009007C6 /* Sample SpriteKit Game Shared */ = {
 			isa = PBXGroup;
 			children = (
-				29A6450C2776EAA8009007C6 /* Actions.sks */,
-				29A6450D2776EAA8009007C6 /* GameScene.sks */,
-				29A6450E2776EAA8009007C6 /* GameScene.swift */,
+				294F45772779072A00977447 /* Source */,
+				294F45762779071C00977447 /* SKS */,
+				294F4573277905A200977447 /* Audio */,
 				29A6450F2776EAA9009007C6 /* Assets.xcassets */,
 			);
 			path = "Sample SpriteKit Game Shared";
@@ -63,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				29A645142776EAA9009007C6 /* Sample SpriteKit Game.app */,
+				294F457C277907BE00977447 /* Sample SpriteKit Game tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +166,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		294F457B277907BE00977447 /* Sample SpriteKit Game tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 294F4590277907BE00977447 /* Build configuration list for PBXNativeTarget "Sample SpriteKit Game tvOS" */;
+			buildPhases = (
+				294F4578277907BE00977447 /* Sources */,
+				294F4579277907BE00977447 /* Frameworks */,
+				294F457A277907BE00977447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sample SpriteKit Game tvOS";
+			productName = "Sample SpriteKit Game tvOS";
+			productReference = 294F457C277907BE00977447 /* Sample SpriteKit Game tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		29A645132776EAA9009007C6 /* Sample SpriteKit Game macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A645252776EAA9009007C6 /* Build configuration list for PBXNativeTarget "Sample SpriteKit Game macOS" */;
@@ -108,6 +210,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					294F457B277907BE00977447 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					29A645132776EAA9009007C6 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -127,18 +232,35 @@
 			projectRoot = "";
 			targets = (
 				29A645132776EAA9009007C6 /* Sample SpriteKit Game macOS */,
+				294F457B277907BE00977447 /* Sample SpriteKit Game tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		294F457A277907BE00977447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294F4593277907CD00977447 /* Bios Boot.wav in Resources */,
+				294F459A277970D400977447 /* OilyCow2Scene.sks in Resources */,
+				294F458A277907BE00977447 /* Main.storyboard in Resources */,
+				294F4581277907BE00977447 /* GameScene.sks in Resources */,
+				294F458C277907BE00977447 /* Assets.xcassets in Resources */,
+				294F458F277907BE00977447 /* LaunchScreen.storyboard in Resources */,
+				294F4583277907BE00977447 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A645122776EAA9009007C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				29A6451D2776EAA9009007C6 /* Main.storyboard in Resources */,
+				294F4575277905BB00977447 /* Bios Boot.wav in Resources */,
 				29A645202776EAA9009007C6 /* GameScene.sks in Resources */,
 				29A645222776EAA9009007C6 /* Assets.xcassets in Resources */,
+				294F4599277970D400977447 /* OilyCow2Scene.sks in Resources */,
 				29A6451F2776EAA9009007C6 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,19 +268,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		294F4578277907BE00977447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294F459427790AE800977447 /* GBLAScene.swift in Sources */,
+				294F4585277907BE00977447 /* GameScene.swift in Sources */,
+				294F459D277970E400977447 /* OilyCow2Scene.swift in Sources */,
+				294F4587277907BE00977447 /* GameViewController.swift in Sources */,
+				294F457F277907BE00977447 /* AppDelegate.swift in Sources */,
+				294F45972779115500977447 /* OilyCowScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29A645102776EAA9009007C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				29A645212776EAA9009007C6 /* GameScene.swift in Sources */,
 				29A6451A2776EAA9009007C6 /* GameViewController.swift in Sources */,
+				294F459C277970E400977447 /* OilyCow2Scene.swift in Sources */,
+				29160A6827780C5A00A81EAE /* GBLAScene.swift in Sources */,
 				29A645182776EAA9009007C6 /* AppDelegate.swift in Sources */,
+				294F45962779115500977447 /* OilyCowScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		294F4588277907BE00977447 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				294F4589277907BE00977447 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		294F458D277907BE00977447 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				294F458E277907BE00977447 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		29A6451B2776EAA9009007C6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -170,6 +324,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		294F4591277907BE00977447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D8456CNSFU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.gregfmartin.Sample-SpriteKit-Game-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		294F4592277907BE00977447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D8456CNSFU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "blog.gregfmartin.Sample-SpriteKit-Game-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		29A645232776EAA9009007C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +551,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		294F4590277907BE00977447 /* Build configuration list for PBXNativeTarget "Sample SpriteKit Game tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				294F4591277907BE00977447 /* Debug */,
+				294F4592277907BE00977447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29A6450A2776EAA8009007C6 /* Build configuration list for PBXProject "Sample SpriteKit Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

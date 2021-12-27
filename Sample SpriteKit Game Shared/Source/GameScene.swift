@@ -12,6 +12,8 @@ class GameScene: SKScene {
     
     fileprivate var label : SKLabelNode?
     fileprivate var spinnyNode : SKShapeNode?
+    fileprivate var boyAvatar: SKSpriteNode?
+    fileprivate var otherBoyAvatar: SKSpriteNode?
 
     
     class func newGameScene() -> GameScene {
@@ -33,6 +35,18 @@ class GameScene: SKScene {
         if let label = self.label {
             label.alpha = 0.0
             label.run(SKAction.fadeIn(withDuration: 2.0))
+        }
+        
+        self.boyAvatar = self.childNode(withName: "//boyAvatar") as? SKSpriteNode
+        if let ba = self.boyAvatar {
+            ba.alpha = 0.0
+            ba.run(SKAction.fadeIn(withDuration: 2.0))
+        }
+        
+        self.otherBoyAvatar = self.childNode(withName: "//otherBoyAvatar") as? SKSpriteNode
+        if let oba = self.otherBoyAvatar {
+            oba.alpha = 0.0;
+            oba.run(SKAction.fadeIn(withDuration: 2.0))
         }
         
         // Create shape node to use during mouse interaction
@@ -137,7 +151,69 @@ extension GameScene {
     override func mouseUp(with event: NSEvent) {
         self.makeSpinny(at: event.location(in: self), color: SKColor.red)
     }
+    
+    override func keyDown(with event: NSEvent) {
+        /*
+         * The problem that I'm running into with this code is that when an intersection occurs,
+         * it's likely that the boyAvatar is overlapping with the otherBoyAvatar when the animation
+         * stops and it's not possible to dislodge the boyAvatar. I'm wondering if it makes sense to
+         * use collision direction flags to see if the boyAvatar can be disallowed from moving futher
+         * in the direction that the collision occurred in (i.e. if a collision occurred on the right
+         * side, disallow movement in that particular direction). This would, however, change the
+         * methods used for checking collisions.
+         */
+        
+        if event.modifierFlags.contains(NSEvent.ModifierFlags.numericPad) {
+            if let arrow = event.charactersIgnoringModifiers, let kc = arrow.unicodeScalars.first?.value {
+                switch Int(kc) {
+                case NSUpArrowFunctionKey:
+                    if let ba = self.boyAvatar {
+//                        ba.run(SKAction.moveBy(x: 0.0, y: 3.0, duration: 1.0))
+                        if !checkCollisionWithPlayer(other: self.otherBoyAvatar) {
+                            ba.run(SKAction.moveBy(x: 0.0, y: 9.0, duration: 0.5))
+                        }
+                    }
+                case NSDownArrowFunctionKey:
+                    if let ba = self.boyAvatar {
+                        if !checkCollisionWithPlayer(other: self.otherBoyAvatar) {
+                            ba.run(SKAction.moveBy(x: 0.0, y: -9.0, duration: 0.5))
+                        }
+                    }
+                case NSLeftArrowFunctionKey:
+                    if let ba = self.boyAvatar {
+                        if !checkCollisionWithPlayer(other: self.otherBoyAvatar) {
+                            ba.run(SKAction.moveBy(x: -9.0, y: 0.0, duration: 0.5))
+                        }
+                    }
+                case NSRightArrowFunctionKey:
+                    if let ba = self.boyAvatar {
+                        if !checkCollisionWithPlayer(other: self.otherBoyAvatar) {
+                            ba.run(SKAction.moveBy(x: 9.0, y: 0.0, duration: 0.5))
+                        }
+                    }
+                default:
+                    break
+                }
+            }
+        }
+    }
 
 }
 #endif
+
+extension GameScene {
+    func checkCollisionWithPlayer(other o: SKSpriteNode?) -> Bool {
+        if let a = o {
+            if let ba = self.boyAvatar {
+                if ba.intersects(a) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
+        
+        return false
+    }
+}
 
