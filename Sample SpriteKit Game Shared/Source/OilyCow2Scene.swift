@@ -23,9 +23,21 @@ class OilyCow2Scene: SKScene {
     
     func setUpScene() {
         self.oilyCow2Label = self.childNode(withName: "//oilyCow2Label") as? SKLabelNode
-//        if let ocl = self.oilyCow2Label {
-//            ocl.run(SKAction.sequence([SKAction.init(named: "SlideToCenter", duration: 4.0)!, SKAction.init(named: "PlayBing")!]))
-//        }
+        if let ocl = self.oilyCow2Label {
+            ocl.run(
+                SKAction.sequence(
+                    [SKAction.moveTo(y: 0.0, duration: 4.0),
+                     SKAction.playSoundFileNamed("Bios Boot", waitForCompletion: true),
+                     SKAction.wait(forDuration: 2.0),
+                     SKAction.run {
+                         let reveal = SKTransition.fade(withDuration: 3.0)
+                         let sts = SampleTitleScene.newSampleTitleScene()
+                         self.view?.presentScene(sts, transition: reveal)
+                     }
+                    ]
+                )
+            )
+        }
     }
     
     override func didMove(to view: SKView) {

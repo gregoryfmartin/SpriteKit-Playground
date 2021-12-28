@@ -39,7 +39,8 @@ class GBLAScene: SKScene {
                  SKAction.wait(forDuration: 2.0),
                  SKAction.run({
                      let reveal = SKTransition.fade(withDuration: 3.0)
-                     let ocScene = OilyCowScene()
+                     let ocScene = OilyCow2Scene.newOilyCow2Scene()
+                     ocScene.setUpScene()
                      self.view?.presentScene(ocScene, transition: reveal)
                  })
                 ]

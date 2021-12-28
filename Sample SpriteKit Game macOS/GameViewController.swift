@@ -18,7 +18,7 @@ class GameViewController: NSViewController {
 //        let scene = SKScene(fileNamed: "GBLAScene")
 //        print("Creating a GBLA Scene")
         let scene = GBLAScene()
-//        let scene = OilyCow2Scene.newOilyCow2Scene()
+//        let scene = SampleTitleScene.newSampleTitleScene()
         
         // Present the scene
 //        print("Presenting the GBLA Scene")

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290B2B1A277A6E6C007382C7 /* SampleTitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 290B2B19277A6E6C007382C7 /* SampleTitleScene.sks */; };
 		29160A6827780C5A00A81EAE /* GBLAScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29160A6727780C5A00A81EAE /* GBLAScene.swift */; };
+		29433CF7277A7A4700DBF30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450F2776EAA9009007C6 /* Assets.xcassets */; };
 		294F4575277905BB00977447 /* Bios Boot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 294F4574277905BB00977447 /* Bios Boot.wav */; };
 		294F457F277907BE00977447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F457E277907BE00977447 /* AppDelegate.swift */; };
 		294F4581277907BE00977447 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4580277907BE00977447 /* GameScene.sks */; };
@@ -15,7 +17,6 @@
 		294F4585277907BE00977447 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F4584277907BE00977447 /* GameScene.swift */; };
 		294F4587277907BE00977447 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F4586277907BE00977447 /* GameViewController.swift */; };
 		294F458A277907BE00977447 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294F4588277907BE00977447 /* Main.storyboard */; };
-		294F458C277907BE00977447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 294F458B277907BE00977447 /* Assets.xcassets */; };
 		294F458F277907BE00977447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 294F458D277907BE00977447 /* LaunchScreen.storyboard */; };
 		294F4593277907CD00977447 /* Bios Boot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 294F4574277905BB00977447 /* Bios Boot.wav */; };
 		294F459427790AE800977447 /* GBLAScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29160A6727780C5A00A81EAE /* GBLAScene.swift */; };
@@ -25,6 +26,11 @@
 		294F459A277970D400977447 /* OilyCow2Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4598277970D400977447 /* OilyCow2Scene.sks */; };
 		294F459C277970E400977447 /* OilyCow2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F459B277970E400977447 /* OilyCow2Scene.swift */; };
 		294F459D277970E400977447 /* OilyCow2Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F459B277970E400977447 /* OilyCow2Scene.swift */; };
+		295A3F88277A719400174BB7 /* Title BGM.wav in Resources */ = {isa = PBXBuildFile; fileRef = 295A3F87277A719400174BB7 /* Title BGM.wav */; };
+		295A3F89277A719400174BB7 /* Title BGM.wav in Resources */ = {isa = PBXBuildFile; fileRef = 295A3F87277A719400174BB7 /* Title BGM.wav */; };
+		295A3F8B277A728200174BB7 /* SampleTitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295A3F8A277A728200174BB7 /* SampleTitleScene.swift */; };
+		295A3F8C277A728200174BB7 /* SampleTitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295A3F8A277A728200174BB7 /* SampleTitleScene.swift */; };
+		295A3F8D277A736600174BB7 /* SampleTitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 290B2B19277A6E6C007382C7 /* SampleTitleScene.sks */; };
 		29A645182776EAA9009007C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A645172776EAA9009007C6 /* AppDelegate.swift */; };
 		29A6451A2776EAA9009007C6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A645192776EAA9009007C6 /* GameViewController.swift */; };
 		29A6451D2776EAA9009007C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A6451B2776EAA9009007C6 /* Main.storyboard */; };
@@ -35,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290B2B19277A6E6C007382C7 /* SampleTitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SampleTitleScene.sks; sourceTree = "<group>"; };
 		29160A6727780C5A00A81EAE /* GBLAScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBLAScene.swift; sourceTree = "<group>"; };
 		294F4574277905BB00977447 /* Bios Boot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bios Boot.wav"; sourceTree = "<group>"; };
 		294F457C277907BE00977447 /* Sample SpriteKit Game tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample SpriteKit Game tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +56,8 @@
 		294F45952779115500977447 /* OilyCowScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilyCowScene.swift; sourceTree = "<group>"; };
 		294F4598277970D400977447 /* OilyCow2Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OilyCow2Scene.sks; sourceTree = "<group>"; };
 		294F459B277970E400977447 /* OilyCow2Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilyCow2Scene.swift; sourceTree = "<group>"; };
+		295A3F87277A719400174BB7 /* Title BGM.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Title BGM.wav"; sourceTree = "<group>"; };
+		295A3F8A277A728200174BB7 /* SampleTitleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTitleScene.swift; sourceTree = "<group>"; };
 		29A6450C2776EAA8009007C6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		29A6450D2776EAA8009007C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		29A6450E2776EAA8009007C6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		294F4573277905A200977447 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				295A3F87277A719400174BB7 /* Title BGM.wav */,
 				294F4574277905BB00977447 /* Bios Boot.wav */,
 			);
 			path = Audio;
@@ -92,6 +102,7 @@
 				29A6450C2776EAA8009007C6 /* Actions.sks */,
 				29A6450D2776EAA8009007C6 /* GameScene.sks */,
 				294F4598277970D400977447 /* OilyCow2Scene.sks */,
+				290B2B19277A6E6C007382C7 /* SampleTitleScene.sks */,
 			);
 			path = SKS;
 			sourceTree = "<group>";
@@ -103,6 +114,7 @@
 				29A6450E2776EAA8009007C6 /* GameScene.swift */,
 				294F45952779115500977447 /* OilyCowScene.swift */,
 				294F459B277970E400977447 /* OilyCow2Scene.swift */,
+				295A3F8A277A728200174BB7 /* SampleTitleScene.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -242,11 +254,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29433CF7277A7A4700DBF30A /* Assets.xcassets in Resources */,
 				294F4593277907CD00977447 /* Bios Boot.wav in Resources */,
+				295A3F8D277A736600174BB7 /* SampleTitleScene.sks in Resources */,
 				294F459A277970D400977447 /* OilyCow2Scene.sks in Resources */,
 				294F458A277907BE00977447 /* Main.storyboard in Resources */,
+				295A3F89277A719400174BB7 /* Title BGM.wav in Resources */,
 				294F4581277907BE00977447 /* GameScene.sks in Resources */,
-				294F458C277907BE00977447 /* Assets.xcassets in Resources */,
 				294F458F277907BE00977447 /* LaunchScreen.storyboard in Resources */,
 				294F4583277907BE00977447 /* Actions.sks in Resources */,
 			);
@@ -259,8 +273,10 @@
 				29A6451D2776EAA9009007C6 /* Main.storyboard in Resources */,
 				294F4575277905BB00977447 /* Bios Boot.wav in Resources */,
 				29A645202776EAA9009007C6 /* GameScene.sks in Resources */,
+				295A3F88277A719400174BB7 /* Title BGM.wav in Resources */,
 				29A645222776EAA9009007C6 /* Assets.xcassets in Resources */,
 				294F4599277970D400977447 /* OilyCow2Scene.sks in Resources */,
+				290B2B1A277A6E6C007382C7 /* SampleTitleScene.sks in Resources */,
 				29A6451F2776EAA9009007C6 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295A3F8C277A728200174BB7 /* SampleTitleScene.swift in Sources */,
 				294F459427790AE800977447 /* GBLAScene.swift in Sources */,
 				294F4585277907BE00977447 /* GameScene.swift in Sources */,
 				294F459D277970E400977447 /* OilyCow2Scene.swift in Sources */,
@@ -285,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				295A3F8B277A728200174BB7 /* SampleTitleScene.swift in Sources */,
 				29A645212776EAA9009007C6 /* GameScene.swift in Sources */,
 				29A6451A2776EAA9009007C6 /* GameViewController.swift in Sources */,
 				294F459C277970E400977447 /* OilyCow2Scene.swift in Sources */,

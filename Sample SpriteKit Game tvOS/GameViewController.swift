@@ -10,12 +10,14 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
+//            let scene = SampleTitleScene.newSampleTitleScene()
+//            scene.scaleMode = .aspectFill
+//            view.presentScene(scene)
             let scene = GBLAScene()
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
@@ -34,5 +36,4 @@ class GameViewController: UIViewController {
             view.showsNodeCount = true
         }
     }
-
 }
