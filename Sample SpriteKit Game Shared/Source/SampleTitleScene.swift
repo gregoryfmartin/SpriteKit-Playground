@@ -28,9 +28,9 @@ class SampleTitleScene: SKScene {
     
     func setupScene() {
         self.gameTitleBgAudio = self.childNode(withName: "//gameTitleBgAudio") as? SKAudioNode
-        if let bgm = self.gameTitleBgAudio {
-            bgm.run(SKAction.)
-        }
+//        if let bgm = self.gameTitleBgAudio {
+//            bgm.run(SKAction.)
+//        }
     }
     
     override func didMove(to view: SKView) {

@@ -17,8 +17,9 @@ class GameViewController: NSViewController {
 //        let scene = GameScene.newGameScene()
 //        let scene = SKScene(fileNamed: "GBLAScene")
 //        print("Creating a GBLA Scene")
-        let scene = GBLAScene()
+//        let scene = GBLAScene()
 //        let scene = SampleTitleScene.newSampleTitleScene()
+        let scene = TileMapScene.newTileMapScene()
         
         // Present the scene
 //        print("Presenting the GBLA Scene")
