@@ -18,6 +18,8 @@
 		2929238C278168400028B5F0 /* TileMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929238B278168400028B5F0 /* TileMapScene.swift */; };
 		2929238D278168400028B5F0 /* TileMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929238B278168400028B5F0 /* TileMapScene.swift */; };
 		29433CF7277A7A4700DBF30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450F2776EAA9009007C6 /* Assets.xcassets */; };
+		2948387C278B68570083EE91 /* UserControlledCameraScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948387B278B68570083EE91 /* UserControlledCameraScene.swift */; };
+		2948387D278B68570083EE91 /* UserControlledCameraScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2948387B278B68570083EE91 /* UserControlledCameraScene.swift */; };
 		294F4575277905BB00977447 /* Bios Boot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 294F4574277905BB00977447 /* Bios Boot.wav */; };
 		294F457F277907BE00977447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F457E277907BE00977447 /* AppDelegate.swift */; };
 		294F4581277907BE00977447 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4580277907BE00977447 /* GameScene.sks */; };
@@ -55,6 +57,7 @@
 		2929238327801DED0028B5F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29292388278134AB0028B5F0 /* TileMapScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileMapScene.sks; sourceTree = "<group>"; };
 		2929238B278168400028B5F0 /* TileMapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileMapScene.swift; sourceTree = "<group>"; };
+		2948387B278B68570083EE91 /* UserControlledCameraScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserControlledCameraScene.swift; sourceTree = "<group>"; };
 		294F4574277905BB00977447 /* Bios Boot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bios Boot.wav"; sourceTree = "<group>"; };
 		294F457C277907BE00977447 /* Sample SpriteKit Game tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample SpriteKit Game tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294F457E277907BE00977447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 				294F459B277970E400977447 /* OilyCow2Scene.swift */,
 				295A3F8A277A728200174BB7 /* SampleTitleScene.swift */,
 				2929238B278168400028B5F0 /* TileMapScene.swift */,
+				2948387B278B68570083EE91 /* UserControlledCameraScene.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -317,6 +321,7 @@
 				294F4587277907BE00977447 /* GameViewController.swift in Sources */,
 				294F457F277907BE00977447 /* AppDelegate.swift in Sources */,
 				294F45972779115500977447 /* OilyCowScene.swift in Sources */,
+				2948387D278B68570083EE91 /* UserControlledCameraScene.swift in Sources */,
 				2929238D278168400028B5F0 /* TileMapScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +337,7 @@
 				29160A6827780C5A00A81EAE /* GBLAScene.swift in Sources */,
 				29A645182776EAA9009007C6 /* AppDelegate.swift in Sources */,
 				294F45962779115500977447 /* OilyCowScene.swift in Sources */,
+				2948387C278B68570083EE91 /* UserControlledCameraScene.swift in Sources */,
 				2929238C278168400028B5F0 /* TileMapScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

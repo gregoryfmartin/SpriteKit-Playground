@@ -20,6 +20,8 @@ class GameViewController: NSViewController {
 //        let scene = GBLAScene()
 //        let scene = SampleTitleScene.newSampleTitleScene()
         let scene = TileMapScene.newTileMapScene()
+        scene.setupScene()
+//        let scene = UserControlledCameraScene.newUserControlledCameraScene()
         
         // Present the scene
 //        print("Presenting the GBLA Scene")
