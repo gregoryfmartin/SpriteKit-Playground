@@ -113,3 +113,7 @@ extension TileMapScene {
     }
 }
 #endif
+
+#if os(tvOS) || os(iOS)
+// TODO: Implement touch controls to do the same things as above
+#endif
