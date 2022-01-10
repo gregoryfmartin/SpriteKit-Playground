@@ -9,6 +9,7 @@ import SpriteKit
 
 class TileMapScene: SKScene {
     fileprivate var localCamera: SKCameraNode?
+    fileprivate var rainfallEmitter: SKEmitterNode?
     
     class func newTileMapScene() -> TileMapScene {
         guard let scene = SKScene(fileNamed: "TileMapScene") as? TileMapScene else {
@@ -26,6 +27,11 @@ class TileMapScene: SKScene {
         if let cam = self.localCamera {
             self.camera = cam
         }
+        
+        self.rainfallEmitter = SKEmitterNode(fileNamed: "SampleRainParticles")
+        self.rainfallEmitter?.position = CGPoint(x: 0.0, y: 500.0)
+        self.rainfallEmitter?.targetNode = self
+        self.addChild(rainfallEmitter!)
     }
     
     override func didMove(to view: SKView) {

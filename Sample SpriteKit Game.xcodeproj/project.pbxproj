@@ -18,6 +18,10 @@
 		2929238C278168400028B5F0 /* TileMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929238B278168400028B5F0 /* TileMapScene.swift */; };
 		2929238D278168400028B5F0 /* TileMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929238B278168400028B5F0 /* TileMapScene.swift */; };
 		29433CF7277A7A4700DBF30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450F2776EAA9009007C6 /* Assets.xcassets */; };
+		29492FEC278BFBF600E987C9 /* SampleRainParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEA278BFBF600E987C9 /* SampleRainParticles.sks */; };
+		29492FED278BFBF600E987C9 /* SampleRainParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEA278BFBF600E987C9 /* SampleRainParticles.sks */; };
+		29492FEE278BFBF600E987C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEB278BFBF600E987C9 /* Assets.xcassets */; };
+		29492FEF278BFBF600E987C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEB278BFBF600E987C9 /* Assets.xcassets */; };
 		294F4575277905BB00977447 /* Bios Boot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 294F4574277905BB00977447 /* Bios Boot.wav */; };
 		294F457F277907BE00977447 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294F457E277907BE00977447 /* AppDelegate.swift */; };
 		294F4581277907BE00977447 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 294F4580277907BE00977447 /* GameScene.sks */; };
@@ -55,6 +59,8 @@
 		2929238327801DED0028B5F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29292388278134AB0028B5F0 /* TileMapScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileMapScene.sks; sourceTree = "<group>"; };
 		2929238B278168400028B5F0 /* TileMapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileMapScene.swift; sourceTree = "<group>"; };
+		29492FEA278BFBF600E987C9 /* SampleRainParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SampleRainParticles.sks; sourceTree = "<group>"; };
+		29492FEB278BFBF600E987C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		294F4574277905BB00977447 /* Bios Boot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Bios Boot.wav"; sourceTree = "<group>"; };
 		294F457C277907BE00977447 /* Sample SpriteKit Game tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample SpriteKit Game tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		294F457E277907BE00977447 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 		29492FE8278BFB3400E987C9 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				29492FEA278BFBF600E987C9 /* SampleRainParticles.sks */,
+				29492FEB278BFBF600E987C9 /* Assets.xcassets */,
 			);
 			path = Particles;
 			sourceTree = "<group>";
@@ -111,7 +119,6 @@
 			children = (
 				2929238227801DED0028B5F0 /* MyTileSet.sks */,
 				2929238327801DED0028B5F0 /* Assets.xcassets */,
-				29292388278134AB0028B5F0 /* TileMapScene.sks */,
 			);
 			path = "Tile Maps";
 			sourceTree = "<group>";
@@ -131,6 +138,7 @@
 				29492FE9278BFB3E00E987C9 /* Tile Maps */,
 				29492FE8278BFB3400E987C9 /* Particles */,
 				29A6450C2776EAA8009007C6 /* Actions.sks */,
+				29292388278134AB0028B5F0 /* TileMapScene.sks */,
 				29A6450D2776EAA8009007C6 /* GameScene.sks */,
 				294F4598277970D400977447 /* OilyCow2Scene.sks */,
 				290B2B19277A6E6C007382C7 /* SampleTitleScene.sks */,
@@ -290,10 +298,12 @@
 				2929238A278134AB0028B5F0 /* TileMapScene.sks in Resources */,
 				294F4593277907CD00977447 /* Bios Boot.wav in Resources */,
 				2929238727801DED0028B5F0 /* Assets.xcassets in Resources */,
+				29492FEF278BFBF600E987C9 /* Assets.xcassets in Resources */,
 				295A3F8D277A736600174BB7 /* SampleTitleScene.sks in Resources */,
 				294F459A277970D400977447 /* OilyCow2Scene.sks in Resources */,
 				294F458A277907BE00977447 /* Main.storyboard in Resources */,
 				295A3F89277A719400174BB7 /* Title BGM.wav in Resources */,
+				29492FED278BFBF600E987C9 /* SampleRainParticles.sks in Resources */,
 				294F4581277907BE00977447 /* GameScene.sks in Resources */,
 				294F458F277907BE00977447 /* LaunchScreen.storyboard in Resources */,
 				2929238527801DED0028B5F0 /* MyTileSet.sks in Resources */,
@@ -306,10 +316,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A6451D2776EAA9009007C6 /* Main.storyboard in Resources */,
+				29492FEC278BFBF600E987C9 /* SampleRainParticles.sks in Resources */,
 				294F4575277905BB00977447 /* Bios Boot.wav in Resources */,
 				29A645202776EAA9009007C6 /* GameScene.sks in Resources */,
 				295A3F88277A719400174BB7 /* Title BGM.wav in Resources */,
 				2929238627801DED0028B5F0 /* Assets.xcassets in Resources */,
+				29492FEE278BFBF600E987C9 /* Assets.xcassets in Resources */,
 				29A645222776EAA9009007C6 /* Assets.xcassets in Resources */,
 				29292389278134AB0028B5F0 /* TileMapScene.sks in Resources */,
 				294F4599277970D400977447 /* OilyCow2Scene.sks in Resources */,
