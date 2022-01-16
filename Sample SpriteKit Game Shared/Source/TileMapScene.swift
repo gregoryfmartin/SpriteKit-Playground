@@ -29,9 +29,18 @@ class TileMapScene: SKScene {
         }
         
         self.rainfallEmitter = SKEmitterNode(fileNamed: "SampleRainParticles")
-        self.rainfallEmitter?.position = CGPoint(x: 0.0, y: 500.0)
+        if let cam = self.camera {
+            self.rainfallEmitter?.position = CGPoint(x: cam.position.x, y: cam.position.y + (cam.scene?.size.height)! / 2)
+        }
+//        self.rainfallEmitter?.position = CGPoint(x: (self.localCamera?.position.x)!, y: (self.localCamera?.position.y)! - (self.localCamera?.frame.height)!)
         self.rainfallEmitter?.targetNode = self
         self.addChild(rainfallEmitter!)
+    }
+    
+    func updateEmitterLocation() {
+        if let re = self.rainfallEmitter, let cam = self.camera, let camscene = cam.scene {
+            re.position = CGPoint(x: cam.position.x, y: cam.position.y + camscene.size.height / 2)
+        }
     }
     
     override func didMove(to view: SKView) {
@@ -40,6 +49,9 @@ class TileMapScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         if let cam = self.localCamera {
+            if let camscene = cam.scene {
+                print("Scene size is \(camscene.size.width), \(camscene.size.height)")
+            }
             print("Current camera position is \(cam.position.x), \(cam.position.y)")
             print("Current camera size is \(cam.xScale), \(cam.yScale)")
             print("Current camera rotation is \(cam.zRotation)")
@@ -55,22 +67,54 @@ extension TileMapScene {
                 switch Int(kc) {
                 case NSUpArrowFunctionKey:
                     if let cam = self.localCamera {
-                        cam.run(SKAction.moveBy(x: 0.0, y: 25.0, duration: 0.5))
+//                        cam.run(SKAction.moveBy(x: 0.0, y: 25.0, duration: 0.5))
+                        cam.run(
+                            SKAction.group([
+                                SKAction.moveBy(x: 0.0, y: 25.0, duration: 0.5),
+                                SKAction.run {
+                                    self.updateEmitterLocation()
+                                }
+                            ])
+                        )
                     }
                     break
                 case NSDownArrowFunctionKey:
                     if let cam = self.localCamera {
-                        cam.run(SKAction.moveBy(x: 0.0, y: -25.0, duration: 0.5))
+//                        cam.run(SKAction.moveBy(x: 0.0, y: -25.0, duration: 0.5))
+                        cam.run(
+                            SKAction.group([
+                                SKAction.moveBy(x: 0.0, y: -25.0, duration: 0.5),
+                                SKAction.run {
+                                    self.updateEmitterLocation()
+                                }
+                            ])
+                        )
                     }
                     break
                 case NSLeftArrowFunctionKey:
                     if let cam = self.localCamera {
-                        cam.run(SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5))
+//                        cam.run(SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5))
+                        cam.run(
+                            SKAction.group([
+                                SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5),
+                                SKAction.run {
+                                    self.updateEmitterLocation()
+                                }
+                            ])
+                        )
                     }
                     break
                 case NSRightArrowFunctionKey:
                     if let cam = self.localCamera {
-                        cam.run(SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5))
+//                        cam.run(SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5))
+                        cam.run(
+                            SKAction.group([
+                                SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5),
+                                SKAction.run {
+                                    self.updateEmitterLocation()
+                                }
+                            ])
+                        )
                     }
                     break
                 default:
