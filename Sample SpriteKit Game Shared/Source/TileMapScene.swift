@@ -10,6 +10,7 @@ import SpriteKit
 class TileMapScene: SKScene {
     fileprivate var localCamera: SKCameraNode?
     fileprivate var rainfallEmitter: SKEmitterNode?
+    fileprivate var sampleSprite: SKSpriteNode?
     
     class func newTileMapScene() -> TileMapScene {
         guard let scene = SKScene(fileNamed: "TileMapScene") as? TileMapScene else {
