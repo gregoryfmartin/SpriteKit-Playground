@@ -50,6 +50,8 @@
 		29A645202776EAA9009007C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450D2776EAA8009007C6 /* GameScene.sks */; };
 		29A645212776EAA9009007C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A6450E2776EAA8009007C6 /* GameScene.swift */; };
 		29A645222776EAA9009007C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450F2776EAA9009007C6 /* Assets.xcassets */; };
+		29D85771279DDE4D007F9772 /* GunwomanSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D85770279DDE4D007F9772 /* GunwomanSprite.swift */; };
+		29D85772279DDE4D007F9772 /* GunwomanSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D85770279DDE4D007F9772 /* GunwomanSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,7 @@
 		29A645192776EAA9009007C6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		29A6451C2776EAA9009007C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29A6451E2776EAA9009007C6 /* Sample_SpriteKit_Game_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sample_SpriteKit_Game_macOS.entitlements; sourceTree = "<group>"; };
+		29D85770279DDE4D007F9772 /* GunwomanSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunwomanSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 		294F45772779072A00977447 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				29D8576F279DDE3C007F9772 /* Entities */,
 				29160A6727780C5A00A81EAE /* GBLAScene.swift */,
 				29A6450E2776EAA8009007C6 /* GameScene.swift */,
 				294F45952779115500977447 /* OilyCowScene.swift */,
@@ -213,6 +217,14 @@
 				29A6451E2776EAA9009007C6 /* Sample_SpriteKit_Game_macOS.entitlements */,
 			);
 			path = "Sample SpriteKit Game macOS";
+			sourceTree = "<group>";
+		};
+		29D8576F279DDE3C007F9772 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				29D85770279DDE4D007F9772 /* GunwomanSprite.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +353,7 @@
 				295A3F8C277A728200174BB7 /* SampleTitleScene.swift in Sources */,
 				294F459427790AE800977447 /* GBLAScene.swift in Sources */,
 				294F4585277907BE00977447 /* GameScene.swift in Sources */,
+				29D85772279DDE4D007F9772 /* GunwomanSprite.swift in Sources */,
 				294F459D277970E400977447 /* OilyCow2Scene.swift in Sources */,
 				294F4587277907BE00977447 /* GameViewController.swift in Sources */,
 				294F457F277907BE00977447 /* AppDelegate.swift in Sources */,
@@ -356,6 +369,7 @@
 				295A3F8B277A728200174BB7 /* SampleTitleScene.swift in Sources */,
 				29A645212776EAA9009007C6 /* GameScene.swift in Sources */,
 				29A6451A2776EAA9009007C6 /* GameViewController.swift in Sources */,
+				29D85771279DDE4D007F9772 /* GunwomanSprite.swift in Sources */,
 				294F459C277970E400977447 /* OilyCow2Scene.swift in Sources */,
 				29160A6827780C5A00A81EAE /* GBLAScene.swift in Sources */,
 				29A645182776EAA9009007C6 /* AppDelegate.swift in Sources */,

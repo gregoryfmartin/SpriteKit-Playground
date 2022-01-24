@@ -10,7 +10,7 @@ import SpriteKit
 class TileMapScene: SKScene {
     fileprivate var localCamera: SKCameraNode?
     fileprivate var rainfallEmitter: SKEmitterNode?
-    fileprivate var sampleSprite: SKSpriteNode?
+    fileprivate var sampleSprite: GunwomanSprite?
     
     class func newTileMapScene() -> TileMapScene {
         guard let scene = SKScene(fileNamed: "TileMapScene") as? TileMapScene else {
@@ -28,6 +28,8 @@ class TileMapScene: SKScene {
         if let cam = self.localCamera {
             self.camera = cam
         }
+        
+        self.sampleSprite = self.childNode(withName: "sampleSprite") as? GunwomanSprite
         
         self.rainfallEmitter = SKEmitterNode(fileNamed: "SampleRainParticles")
         if let cam = self.camera {
@@ -93,30 +95,38 @@ extension TileMapScene {
                     }
                     break
                 case NSLeftArrowFunctionKey:
-                    if let cam = self.localCamera {
-//                        cam.run(SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5))
-                        cam.run(
-                            SKAction.group([
-                                SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5),
-                                SKAction.run {
-                                    self.updateEmitterLocation()
-                                }
-                            ])
-                        )
+                    if let ss = self.sampleSprite {
+                        ss.direction = .left
                     }
+                    
+//                    if let cam = self.localCamera {
+////                        cam.run(SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5))
+//                        cam.run(
+//                            SKAction.group([
+//                                SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5),
+//                                SKAction.run {
+//                                    self.updateEmitterLocation()
+//                                }
+//                            ])
+//                        )
+//                    }
                     break
                 case NSRightArrowFunctionKey:
-                    if let cam = self.localCamera {
-//                        cam.run(SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5))
-                        cam.run(
-                            SKAction.group([
-                                SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5),
-                                SKAction.run {
-                                    self.updateEmitterLocation()
-                                }
-                            ])
-                        )
+                    if let ss = self.sampleSprite {
+                        ss.direction = .right
                     }
+                    
+//                    if let cam = self.localCamera {
+////                        cam.run(SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5))
+//                        cam.run(
+//                            SKAction.group([
+//                                SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5),
+//                                SKAction.run {
+//                                    self.updateEmitterLocation()
+//                                }
+//                            ])
+//                        )
+//                    }
                     break
                 default:
                     break
