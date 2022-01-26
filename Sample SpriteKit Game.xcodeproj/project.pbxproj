@@ -17,7 +17,6 @@
 		2929238A278134AB0028B5F0 /* TileMapScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29292388278134AB0028B5F0 /* TileMapScene.sks */; };
 		2929238C278168400028B5F0 /* TileMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929238B278168400028B5F0 /* TileMapScene.swift */; };
 		2929238D278168400028B5F0 /* TileMapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2929238B278168400028B5F0 /* TileMapScene.swift */; };
-		29433CF7277A7A4700DBF30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450F2776EAA9009007C6 /* Assets.xcassets */; };
 		29492FEC278BFBF600E987C9 /* SampleRainParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEA278BFBF600E987C9 /* SampleRainParticles.sks */; };
 		29492FED278BFBF600E987C9 /* SampleRainParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEA278BFBF600E987C9 /* SampleRainParticles.sks */; };
 		29492FEE278BFBF600E987C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29492FEB278BFBF600E987C9 /* Assets.xcassets */; };
@@ -43,6 +42,7 @@
 		295A3F8B277A728200174BB7 /* SampleTitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295A3F8A277A728200174BB7 /* SampleTitleScene.swift */; };
 		295A3F8C277A728200174BB7 /* SampleTitleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295A3F8A277A728200174BB7 /* SampleTitleScene.swift */; };
 		295A3F8D277A736600174BB7 /* SampleTitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 290B2B19277A6E6C007382C7 /* SampleTitleScene.sks */; };
+		298AA93627A1890600235EDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6450F2776EAA9009007C6 /* Assets.xcassets */; };
 		29A645182776EAA9009007C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A645172776EAA9009007C6 /* AppDelegate.swift */; };
 		29A6451A2776EAA9009007C6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A645192776EAA9009007C6 /* GameViewController.swift */; };
 		29A6451D2776EAA9009007C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29A6451B2776EAA9009007C6 /* Main.storyboard */; };
@@ -306,7 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29433CF7277A7A4700DBF30A /* Assets.xcassets in Resources */,
+				298AA93627A1890600235EDC /* Assets.xcassets in Resources */,
 				2929238A278134AB0028B5F0 /* TileMapScene.sks in Resources */,
 				294F4593277907CD00977447 /* Bios Boot.wav in Resources */,
 				2929238727801DED0028B5F0 /* Assets.xcassets in Resources */,

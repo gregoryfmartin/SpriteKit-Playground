@@ -59,11 +59,39 @@ class TileMapScene: SKScene {
             print("Current camera size is \(cam.xScale), \(cam.yScale)")
             print("Current camera rotation is \(cam.zRotation)")
         }
+        if let ss = self.sampleSprite {
+            ss.update(currentTime)
+        }
     }
 }
 
 #if os(OSX)
 extension TileMapScene {
+    override func keyUp(with event: NSEvent) {
+        if event.modifierFlags.contains(NSEvent.ModifierFlags.numericPad) {
+            if let arrow = event.charactersIgnoringModifiers, let kc = arrow.unicodeScalars.first?.value {
+                switch Int(kc) {
+                case NSLeftArrowFunctionKey:
+                    if let ss = self.sampleSprite {
+                        ss.removeAllActions()
+                        ss.direction[GunwomanSprite.DirectionLeft] = true
+                        ss.state = .idleLeft
+                    }
+                    break
+                case NSRightArrowFunctionKey:
+                    if let ss = self.sampleSprite {
+                        ss.removeAllActions()
+                        ss.direction[GunwomanSprite.DirectionRight] = true
+                        ss.state = .idleRight
+                    }
+                    break
+                default:
+                    break
+                }
+            }
+        }
+    }
+    
     override func keyDown(with event: NSEvent) {
         if event.modifierFlags.contains(NSEvent.ModifierFlags.numericPad) {
             if let arrow = event.charactersIgnoringModifiers, let kc = arrow.unicodeScalars.first?.value {
@@ -96,7 +124,8 @@ extension TileMapScene {
                     break
                 case NSLeftArrowFunctionKey:
                     if let ss = self.sampleSprite {
-                        ss.direction = .left
+                        ss.direction[GunwomanSprite.DirectionLeft] = true
+                        ss.state = .walkLeft
                     }
                     
 //                    if let cam = self.localCamera {
@@ -113,7 +142,8 @@ extension TileMapScene {
                     break
                 case NSRightArrowFunctionKey:
                     if let ss = self.sampleSprite {
-                        ss.direction = .right
+                        ss.direction[GunwomanSprite.DirectionRight] = true
+                        ss.state = .walkRight
                     }
                     
 //                    if let cam = self.localCamera {
