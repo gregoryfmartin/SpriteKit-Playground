@@ -10,7 +10,7 @@ import SpriteKit
 class TileMapScene: SKScene {
     fileprivate var localCamera: SKCameraNode?
     fileprivate var rainfallEmitter: SKEmitterNode?
-    fileprivate var sampleSprite: GunwomanSprite?
+    fileprivate var sampleSprite: GunwomanSprite = GunwomanSprite()
     
     class func newTileMapScene() -> TileMapScene {
         guard let scene = SKScene(fileNamed: "TileMapScene") as? TileMapScene else {
@@ -29,7 +29,9 @@ class TileMapScene: SKScene {
             self.camera = cam
         }
         
-        self.sampleSprite = self.childNode(withName: "sampleSprite") as? GunwomanSprite
+        self.sampleSprite.position.x = 100.0
+        self.sampleSprite.position.y = 100.0
+        self.addChild(self.sampleSprite)
         
         self.rainfallEmitter = SKEmitterNode(fileNamed: "SampleRainParticles")
         if let cam = self.camera {
@@ -59,6 +61,9 @@ class TileMapScene: SKScene {
             print("Current camera size is \(cam.xScale), \(cam.yScale)")
             print("Current camera rotation is \(cam.zRotation)")
         }
+        print("Gunwoman Sprite size is \(self.sampleSprite.size.width)x\(self.sampleSprite.size.height)")
+        print("Gunwoman Sprite frame is \(self.sampleSprite.frame.width)x\(self.sampleSprite.frame.height)")
+        print("Gunwoman Sprite texture size is \(self.sampleSprite.texture?.size().width ?? -99.99)x\(self.sampleSprite.texture?.size().height ?? -99.99)")
     }
 }
 
@@ -69,18 +74,14 @@ extension TileMapScene {
             if let arrow = event.charactersIgnoringModifiers, let kc = arrow.unicodeScalars.first?.value {
                 switch Int(kc) {
                 case NSLeftArrowFunctionKey:
-                    if let ss = self.sampleSprite {
-                        ss.removeAllActions()
-                        ss.direction[GunwomanSprite.DirectionLeft] = true
-                        ss.state = .idleLeft
-                    }
+                    self.sampleSprite.removeAllActions()
+                    self.sampleSprite.direction[GunwomanSprite.DirectionLeft] = true
+                    self.sampleSprite.state = .idleLeft
                     break
                 case NSRightArrowFunctionKey:
-                    if let ss = self.sampleSprite {
-                        ss.removeAllActions()
-                        ss.direction[GunwomanSprite.DirectionRight] = true
-                        ss.state = .idleRight
-                    }
+                    self.sampleSprite.removeAllActions()
+                    self.sampleSprite.direction[GunwomanSprite.DirectionRight] = true
+                    self.sampleSprite.state = .idleRight
                     break
                 default:
                     break
@@ -120,9 +121,7 @@ extension TileMapScene {
                     }
                     break
                 case NSLeftArrowFunctionKey:
-                    if let ss = self.sampleSprite {
-                        ss.state = .walkLeft
-                    }
+                    self.sampleSprite.state = .walkLeft
                     
 //                    if let cam = self.localCamera {
 ////                        cam.run(SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5))
@@ -137,9 +136,7 @@ extension TileMapScene {
 //                    }
                     break
                 case NSRightArrowFunctionKey:
-                    if let ss = self.sampleSprite {
-                        ss.state = .walkRight
-                    }
+                    self.sampleSprite.state = .walkRight
                     
 //                    if let cam = self.localCamera {
 ////                        cam.run(SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5))
@@ -193,12 +190,10 @@ extension TileMapScene {
                 }
                 break
             case "q", "Q":
-                if let ss = self.sampleSprite {
-                    if ss.direction[GunwomanSprite.DirectionLeft] == true {
-                        ss.state = .attackLeft
-                    } else if ss.direction[GunwomanSprite.DirectionRight] == true {
-                        ss.state = .attackRight
-                    }
+                if self.sampleSprite.direction[GunwomanSprite.DirectionLeft] == true {
+                    self.sampleSprite.state = .attackLeft
+                } else if self.sampleSprite.direction[GunwomanSprite.DirectionRight] == true {
+                    self.sampleSprite.state = .attackRight
                 }
                 break
             default:

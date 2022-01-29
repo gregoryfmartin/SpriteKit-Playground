@@ -58,34 +58,101 @@ class GunwomanSprite: SKSpriteNode {
             case .idleRight:
                 self.direction[GunwomanSprite.DirectionRight] = true
                 self.direction[GunwomanSprite.DirectionLeft] = false
+                self.size.width = 192.0
+                self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.idleRight.rawValue) == nil {
                     self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleRight.rawValue)
+//                    self.run(
+//                        SKAction.repeatForever(
+//                            SKAction.group([
+//                                SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.15, resize: false, restore: true),
+//                                SKAction.run {
+//                                    self.size.width = self.texture?.size().width ?? 0.0
+//                                    self.size.height = self.texture?.size().height ?? 0.0
+//                                }
+//                            ])
+//                        ), withKey: GunwomanAnimations.idleRight.rawValue
+//                    )
                 }
                 break
             case .idleLeft:
                 self.direction[GunwomanSprite.DirectionRight] = false
                 self.direction[GunwomanSprite.DirectionLeft] = true
+                self.size.width = 192.0
+                self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.idleLeft.rawValue) == nil {
                     self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleLeft.rawValue)
+//                    self.run(
+//                        SKAction.repeatForever(
+//                            SKAction.group([
+//                                SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.15, resize: false, restore: true),
+//                                SKAction.run {
+//                                    self.size.width = self.texture?.size().width ?? 0.0
+//                                    self.size.height = self.texture?.size().height ?? 0.0
+//                                }
+//                            ])
+//                        ), withKey: GunwomanAnimations.idleLeft.rawValue
+//                    )
                 }
                 break
             case .walkRight:
                 self.direction[GunwomanSprite.DirectionRight] = true
                 self.direction[GunwomanSprite.DirectionLeft] = false
+                self.size.width = 192.0
+                self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.walkRight.rawValue) == nil {
                     self.run(SKAction.repeatForever(SKAction.animate(with: self.walkRightFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkRight.rawValue)
+//                    self.run(
+//                        SKAction.repeatForever(
+//                            SKAction.group([
+//                                SKAction.animate(with: self.walkRightFrames, timePerFrame: 0.1, resize: false, restore: true),
+//                                SKAction.run {
+//                                    self.size.width = self.texture?.size().width ?? 0.0
+//                                    self.size.height = self.texture?.size().height ?? 0.0
+//                                }
+//                            ])
+//                        ), withKey: GunwomanAnimations.walkRight.rawValue
+//                    )
                 }
                 break
             case .walkLeft:
                 self.direction[GunwomanSprite.DirectionRight] = false
                 self.direction[GunwomanSprite.DirectionLeft] = true
+                self.size.width = 192.0
+                self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.walkLeft.rawValue) == nil {
                     self.run(SKAction.repeatForever(SKAction.animate(with: self.walkLeftFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkLeft.rawValue)
+//                    self.run(
+//                        SKAction.repeatForever(
+//                            SKAction.group([
+//                                SKAction.animate(with: self.walkLeftFrames, timePerFrame: 0.1, resize: false, restore: true),
+//                                SKAction.run {
+//                                    self.size.width = self.texture?.size().width ?? 0.0
+//                                    self.size.height = self.texture?.size().height ?? 0.0
+//                                }
+//                            ])
+//                        ), withKey: GunwomanAnimations.walkLeft.rawValue
+//                    )
                 }
                 break
             case .attackRight:
+                self.size.width = 384.0
+                self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.attackRight.rawValue) == nil {
                     self.run(
+//                        SKAction.group([
+//                            SKAction.sequence([
+//                                SKAction.animate(with: self.attackRightFrames, timePerFrame: 0.1, resize: false, restore: true),
+//                                SKAction.run {
+//                                    self.state = .idleRight
+//                                }
+//                            ]),
+//                            SKAction.run {
+//                                self.size.width = self.texture?.size().width ?? 0.0
+//                                self.size.height = self.texture?.size().height ?? 0.0
+//                            }
+//                        ]), withKey: GunwomanAnimations.attackRight.rawValue
+                        
                         SKAction.sequence([
                             SKAction.animate(with: self.attackRightFrames, timePerFrame: 0.1, resize: false, restore: true),
                             SKAction.run {
@@ -96,8 +163,23 @@ class GunwomanSprite: SKSpriteNode {
                 }
                 break
             case .attackLeft:
+                self.size.width = 384.0
+                self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.attackLeft.rawValue) == nil {
                     self.run(
+//                        SKAction.group([
+//                            SKAction.sequence([
+//                                SKAction.animate(with: self.attackLeftFrames, timePerFrame: 0.1, resize: false, restore: true),
+//                                SKAction.run {
+//                                    self.state = .idleLeft
+//                                }
+//                            ]),
+//                            SKAction.run {
+//                                self.size.width = self.texture?.size().width ?? 0.0
+//                                self.size.height = self.texture?.size().height ?? 0.0
+//                            }
+//                        ]), withKey: GunwomanAnimations.attackLeft.rawValue
+                        
                         SKAction.sequence([
                             SKAction.animate(with: self.attackLeftFrames, timePerFrame: 0.1, resize: false, restore: true),
                             SKAction.run {
