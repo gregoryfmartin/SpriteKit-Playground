@@ -64,6 +64,7 @@ class TileMapScene: SKScene {
         print("Gunwoman Sprite size is \(self.sampleSprite.size.width)x\(self.sampleSprite.size.height)")
         print("Gunwoman Sprite frame is \(self.sampleSprite.frame.width)x\(self.sampleSprite.frame.height)")
         print("Gunwoman Sprite texture size is \(self.sampleSprite.texture?.size().width ?? -99.99)x\(self.sampleSprite.texture?.size().height ?? -99.99)")
+        print("Gunwoman Sprite Origin is \(self.sampleSprite.anchorPoint.x)x\(self.sampleSprite.anchorPoint.y)")
     }
 }
 

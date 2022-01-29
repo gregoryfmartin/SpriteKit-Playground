@@ -39,6 +39,12 @@ class GunwomanSprite: SKSpriteNode {
         case none = "None"
     }
     
+    enum GunwomanAnimationSpeeds: TimeInterval {
+        case idleAnimationSpeed = 0.12
+        case walkAnimationSpeed = 0.09
+        case shootAnimationSpeed = 0.06
+    }
+    
     static let DirectionLeft: Int = 0
     static let DirectionRight: Int = 1
     
@@ -61,7 +67,7 @@ class GunwomanSprite: SKSpriteNode {
                 self.size.width = 192.0
                 self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.idleRight.rawValue) == nil {
-                    self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleRight.rawValue)
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: GunwomanAnimationSpeeds.idleAnimationSpeed.rawValue, resize: false, restore: true)), withKey: GunwomanAnimations.idleRight.rawValue)
 //                    self.run(
 //                        SKAction.repeatForever(
 //                            SKAction.group([
@@ -81,7 +87,7 @@ class GunwomanSprite: SKSpriteNode {
                 self.size.width = 192.0
                 self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.idleLeft.rawValue) == nil {
-                    self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleLeft.rawValue)
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: GunwomanAnimationSpeeds.idleAnimationSpeed.rawValue, resize: false, restore: true)), withKey: GunwomanAnimations.idleLeft.rawValue)
 //                    self.run(
 //                        SKAction.repeatForever(
 //                            SKAction.group([
@@ -101,7 +107,7 @@ class GunwomanSprite: SKSpriteNode {
                 self.size.width = 192.0
                 self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.walkRight.rawValue) == nil {
-                    self.run(SKAction.repeatForever(SKAction.animate(with: self.walkRightFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkRight.rawValue)
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.walkRightFrames, timePerFrame: GunwomanAnimationSpeeds.walkAnimationSpeed.rawValue, resize: false, restore: true)), withKey: GunwomanAnimations.walkRight.rawValue)
 //                    self.run(
 //                        SKAction.repeatForever(
 //                            SKAction.group([
@@ -121,7 +127,7 @@ class GunwomanSprite: SKSpriteNode {
                 self.size.width = 192.0
                 self.size.height = 192.0
                 if self.action(forKey: GunwomanAnimations.walkLeft.rawValue) == nil {
-                    self.run(SKAction.repeatForever(SKAction.animate(with: self.walkLeftFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkLeft.rawValue)
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.walkLeftFrames, timePerFrame: GunwomanAnimationSpeeds.walkAnimationSpeed.rawValue, resize: false, restore: true)), withKey: GunwomanAnimations.walkLeft.rawValue)
 //                    self.run(
 //                        SKAction.repeatForever(
 //                            SKAction.group([
@@ -154,7 +160,7 @@ class GunwomanSprite: SKSpriteNode {
 //                        ]), withKey: GunwomanAnimations.attackRight.rawValue
                         
                         SKAction.sequence([
-                            SKAction.animate(with: self.attackRightFrames, timePerFrame: 0.1, resize: false, restore: true),
+                            SKAction.animate(with: self.attackRightFrames, timePerFrame: GunwomanAnimationSpeeds.shootAnimationSpeed.rawValue, resize: false, restore: true),
                             SKAction.run {
                                 self.state = .idleRight
                             }
@@ -181,7 +187,7 @@ class GunwomanSprite: SKSpriteNode {
 //                        ]), withKey: GunwomanAnimations.attackLeft.rawValue
                         
                         SKAction.sequence([
-                            SKAction.animate(with: self.attackLeftFrames, timePerFrame: 0.1, resize: false, restore: true),
+                            SKAction.animate(with: self.attackLeftFrames, timePerFrame: GunwomanAnimationSpeeds.shootAnimationSpeed.rawValue, resize: false, restore: true),
                             SKAction.run {
                                 self.state = .idleLeft
                             }
