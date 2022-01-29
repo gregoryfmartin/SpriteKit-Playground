@@ -13,8 +13,8 @@ class GunwomanSprite: SKSpriteNode {
         case idleLeft
         case walkRight
         case walkLeft
-        case shootRight
-        case shootLeft
+        case attackRight
+        case attackLeft
     }
     
 //    enum GunwomanActions: String, CaseIterable {
@@ -34,6 +34,8 @@ class GunwomanSprite: SKSpriteNode {
         case idleRight = "Gunwoman Idle Right"
         case walkLeft = "Gunwoman Walk Left"
         case walkRight = "Gunwoman Walk Right"
+        case attackRight = "Gunwoman Attack Right"
+        case attackLeft = "Gunwoman Attack Left"
         case none = "None"
     }
     
@@ -44,8 +46,70 @@ class GunwomanSprite: SKSpriteNode {
     private var idleRightFrames: [SKTexture] = []
     private var walkLeftFrames: [SKTexture] = []
     private var walkRightFrames: [SKTexture] = []
+    private var attackLeftFrames: [SKTexture] = []
+    private var attackRightFrames: [SKTexture] = []
     var direction: [Bool] = [false, false]
-    var state: GunwomanState = .idleRight
+    var state: GunwomanState {
+        get {
+            return self.state
+        }
+        set {
+            switch newValue {
+            case .idleRight:
+                self.direction[GunwomanSprite.DirectionRight] = true
+                self.direction[GunwomanSprite.DirectionLeft] = false
+                if self.action(forKey: GunwomanAnimations.idleRight.rawValue) == nil {
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleRight.rawValue)
+                }
+                break
+            case .idleLeft:
+                self.direction[GunwomanSprite.DirectionRight] = false
+                self.direction[GunwomanSprite.DirectionLeft] = true
+                if self.action(forKey: GunwomanAnimations.idleLeft.rawValue) == nil {
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleLeft.rawValue)
+                }
+                break
+            case .walkRight:
+                self.direction[GunwomanSprite.DirectionRight] = true
+                self.direction[GunwomanSprite.DirectionLeft] = false
+                if self.action(forKey: GunwomanAnimations.walkRight.rawValue) == nil {
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.walkRightFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkRight.rawValue)
+                }
+                break
+            case .walkLeft:
+                self.direction[GunwomanSprite.DirectionRight] = false
+                self.direction[GunwomanSprite.DirectionLeft] = true
+                if self.action(forKey: GunwomanAnimations.walkLeft.rawValue) == nil {
+                    self.run(SKAction.repeatForever(SKAction.animate(with: self.walkLeftFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkLeft.rawValue)
+                }
+                break
+            case .attackRight:
+                if self.action(forKey: GunwomanAnimations.attackRight.rawValue) == nil {
+                    self.run(
+                        SKAction.sequence([
+                            SKAction.animate(with: self.attackRightFrames, timePerFrame: 0.1, resize: false, restore: true),
+                            SKAction.run {
+                                self.state = .idleRight
+                            }
+                        ])
+                    )
+                }
+                break
+            case .attackLeft:
+                if self.action(forKey: GunwomanAnimations.attackLeft.rawValue) == nil {
+                    self.run(
+                        SKAction.sequence([
+                            SKAction.animate(with: self.attackLeftFrames, timePerFrame: 0.1, resize: false, restore: true),
+                            SKAction.run {
+                                self.state = .idleLeft
+                            }
+                        ])
+                    )
+                }
+                break
+            }
+        }
+    }
     
     init() {
         super.init(texture: nil, color: .white, size: .zero)
@@ -61,100 +125,13 @@ class GunwomanSprite: SKSpriteNode {
         self.state = .idleRight
     }
     
-    func update(_ currentTime: TimeInterval) {
-        switch self.state {
-        case .idleRight:
-            if self.action(forKey: GunwomanAnimations.idleRight.rawValue) == nil {
-                self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleRight.rawValue)
-            }
-            break
-        case .idleLeft:
-            if self.action(forKey: GunwomanAnimations.idleLeft.rawValue) == nil {
-                self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.15, resize: false, restore: true)), withKey: GunwomanAnimations.idleLeft.rawValue)
-            }
-            break
-        case .walkRight:
-            if self.action(forKey: GunwomanAnimations.walkRight.rawValue) == nil {
-                self.run(SKAction.repeatForever(SKAction.animate(with: self.walkRightFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkRight.rawValue)
-            }
-            break
-        case .walkLeft:
-            if self.action(forKey: GunwomanAnimations.walkLeft.rawValue) == nil {
-                self.run(SKAction.repeatForever(SKAction.animate(with: self.walkLeftFrames, timePerFrame: 0.1, resize: false, restore: true)), withKey: GunwomanAnimations.walkLeft.rawValue)
-            }
-            break
-        case .shootRight:
-            // I don't actually have the shooting right frames loaded into the assets catalog, so I'll make the idle right animation work here
-            self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.18, resize: false, restore: true)), withKey: GunwomanAnimations.idleRight.rawValue)
-            break
-        case .shootLeft:
-            // I don't actually have the shooting left frames loaded into the assets catalog, so I'll make the idle left animation work here
-            self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.18, resize: false, restore: true)), withKey: GunwomanAnimations.idleLeft.rawValue)
-            break
-        }
-        
-        
-//        // Determine what the current animation should be based on direction and action
-//        switch self.currentAction {
-//        case .idle:
-//            switch self.currentDirection {
-//            case .left:
-//                self.currentAnimation.animation = .idleLeft
-//                break
-//            case .right:
-//                self.currentAnimation.animation = .idleRight
-//                break
-//            case .none:
-//                // TODO: I need to figure out what to do here
-//                break
-//            }
-//            break
-//        case .walk:
-//            switch self.currentDirection {
-//            case .left:
-//                self.currentAnimation.animation = .walkLeft
-//                break
-//            case .right:
-//                self.currentAnimation.animation = .walkRight
-//                break
-//            case .none:
-//                // TODO:  I need to figure out what to do here
-//                break
-//            }
-//            break
-//        case .none:
-//            // TODO: I need to figure out what to do here
-//            break
-//        }
-//
-//        // Determine if the animation can be played or not
-//        if !self.currentAnimation.isPlaying {
-//            self.currentAnimation.isPlaying = true
-//            switch self.currentAnimation.animation {
-//            case .idleLeft:
-//                self.run(SKAction.repeatForever(SKAction.animate(with: self.idleLeftFrames, timePerFrame: 0.18, resize: false, restore: true)))
-//                break
-//            case .idleRight:
-//                self.run(SKAction.repeatForever(SKAction.animate(with: self.idleRightFrames, timePerFrame: 0.18, resize: false, restore: true)))
-//                break
-//            case .walkLeft:
-//                self.run(SKAction.repeatForever(SKAction.animate(with: self.walkLeftFrames, timePerFrame: 0.18, resize: false, restore: true)))
-//                break
-//            case .walkRight:
-//                self.run(SKAction.repeatForever(SKAction.animate(with: self.walkRightFrames, timePerFrame: 0.18, resize: false, restore: true)))
-//                break
-//            case .none:
-//                self.currentAnimation.isPlaying = false
-//                break
-//            }
-//        }
-    }
-    
     private func buildFrames() {
         let idleLeftAtlas = SKTextureAtlas(named: "Gunwoman Idle Left")
         let idleRightAtlas = SKTextureAtlas(named: "Gunwoman Idle Right")
         let walkLeftAtlas = SKTextureAtlas(named: "Gunwoman Walk Left")
         let walkRightAtlas = SKTextureAtlas(named: "Gunwoman Walk Right")
+        let attackLeftAtlas = SKTextureAtlas(named: "Gunwoman Attack Left")
+        let attackRightAtlas = SKTextureAtlas(named: "Gunwoman Attack Right")
         
         // Load the idle left frames
         for i in 1...idleLeftAtlas.textureNames.count {
@@ -198,6 +175,28 @@ class GunwomanSprite: SKSpriteNode {
                 tname = "Gunwoman Walk Right 0\(i)"
             }
             self.walkRightFrames.append(walkRightAtlas.textureNamed(tname))
+        }
+        
+        // Load the shoot left frames
+        for i in 1...attackLeftAtlas.textureNames.count {
+            var tname = ""
+            if i < 10 {
+                tname = "Gunwoman Attack Left 00\(i)"
+            } else {
+                tname = "Gunwoman Attack Left 0\(i)"
+            }
+            self.attackLeftFrames.append(attackLeftAtlas.textureNamed(tname))
+        }
+        
+        // Load the shoot right frames
+        for i in 1...attackRightAtlas.textureNames.count {
+            var tname = ""
+            if i < 10 {
+                tname = "Gunwoman Attack Right 00\(i)"
+            } else {
+                tname = "Gunwoman Attack Right 0\(i)"
+            }
+            self.attackRightFrames.append(attackRightAtlas.textureNamed(tname))
         }
     }
 }

@@ -59,9 +59,6 @@ class TileMapScene: SKScene {
             print("Current camera size is \(cam.xScale), \(cam.yScale)")
             print("Current camera rotation is \(cam.zRotation)")
         }
-        if let ss = self.sampleSprite {
-            ss.update(currentTime)
-        }
     }
 }
 
@@ -124,7 +121,6 @@ extension TileMapScene {
                     break
                 case NSLeftArrowFunctionKey:
                     if let ss = self.sampleSprite {
-                        ss.direction[GunwomanSprite.DirectionLeft] = true
                         ss.state = .walkLeft
                     }
                     
@@ -142,7 +138,6 @@ extension TileMapScene {
                     break
                 case NSRightArrowFunctionKey:
                     if let ss = self.sampleSprite {
-                        ss.direction[GunwomanSprite.DirectionRight] = true
                         ss.state = .walkRight
                     }
                     
@@ -195,6 +190,15 @@ extension TileMapScene {
             case "v", "V":
                 if let cam = self.localCamera {
                     cam.run(SKAction.rotate(byAngle: -(360.0 * .pi / 180), duration: 0.25))
+                }
+                break
+            case "q", "Q":
+                if let ss = self.sampleSprite {
+                    if ss.direction[GunwomanSprite.DirectionLeft] == true {
+                        ss.state = .attackLeft
+                    } else if ss.direction[GunwomanSprite.DirectionRight] == true {
+                        ss.state = .attackRight
+                    }
                 }
                 break
             default:
