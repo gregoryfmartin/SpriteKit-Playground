@@ -10,7 +10,7 @@ import SpriteKit
 class TileMapScene: SKScene {
     fileprivate var localCamera: SKCameraNode?
     fileprivate var rainfallEmitter: SKEmitterNode?
-    fileprivate var sampleSprite: GunwomanSprite = GunwomanSprite()
+    fileprivate var sampleSprite: PlayerSprite = PlayerSprite()
     
     class func newTileMapScene() -> TileMapScene {
         guard let scene = SKScene(fileNamed: "TileMapScene") as? TileMapScene else {
@@ -49,22 +49,29 @@ class TileMapScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
-        print("didMove encountered")
+//        print("didMove encountered")
     }
     
     override func update(_ currentTime: TimeInterval) {
-        if let cam = self.localCamera {
-            if let camscene = cam.scene {
-                print("Scene size is \(camscene.size.width), \(camscene.size.height)")
-            }
-            print("Current camera position is \(cam.position.x), \(cam.position.y)")
-            print("Current camera size is \(cam.xScale), \(cam.yScale)")
-            print("Current camera rotation is \(cam.zRotation)")
-        }
-        print("Gunwoman Sprite size is \(self.sampleSprite.size.width)x\(self.sampleSprite.size.height)")
-        print("Gunwoman Sprite frame is \(self.sampleSprite.frame.width)x\(self.sampleSprite.frame.height)")
-        print("Gunwoman Sprite texture size is \(self.sampleSprite.texture?.size().width ?? -99.99)x\(self.sampleSprite.texture?.size().height ?? -99.99)")
-        print("Gunwoman Sprite Origin is \(self.sampleSprite.anchorPoint.x)x\(self.sampleSprite.anchorPoint.y)")
+        self.sampleSprite.update(currentTime)
+        
+        print("Player Sprite location is \(self.sampleSprite.position.x)x\(self.sampleSprite.position.y)")
+        print("Player Sprite has actions: \(self.sampleSprite.hasActions() ? "true" : "false")")
+        print("Player Sprite Current State: \(self.sampleSprite.fsm.currentState?.className)")
+        
+//        if let cam = self.localCamera {
+//            if let camscene = cam.scene {
+//                print("Scene size is \(camscene.size.width), \(camscene.size.height)")
+//            }
+//            print("Current camera position is \(cam.position.x), \(cam.position.y)")
+//            print("Current camera size is \(cam.xScale), \(cam.yScale)")
+//            print("Current camera rotation is \(cam.zRotation)")
+//        }
+//        print("Gunwoman Sprite size is \(self.sampleSprite.size.width)x\(self.sampleSprite.size.height)")
+//        print("Gunwoman Sprite frame is \(self.sampleSprite.frame.width)x\(self.sampleSprite.frame.height)")
+//        print("Gunwoman Sprite texture size is \(self.sampleSprite.texture?.size().width ?? -99.99)x\(self.sampleSprite.texture?.size().height ?? -99.99)")
+//        print("Gunwoman Sprite Origin is \(self.sampleSprite.anchorPoint.x)x\(self.sampleSprite.anchorPoint.y)")
+//        print("Gunwoman Sprite Current Texture is \(self.sampleSprite.texture.hashValue)")
     }
 }
 
@@ -75,14 +82,20 @@ extension TileMapScene {
             if let arrow = event.charactersIgnoringModifiers, let kc = arrow.unicodeScalars.first?.value {
                 switch Int(kc) {
                 case NSLeftArrowFunctionKey:
-                    self.sampleSprite.removeAllActions()
-                    self.sampleSprite.direction[GunwomanSprite.DirectionLeft] = true
-                    self.sampleSprite.state = .idleLeft
+                    self.sampleSprite.fsm.enter(PlayerSprite.PlayerStateIdling.self)
+                    
+                    
+//                    self.sampleSprite.removeAllActions()
+//                    self.sampleSprite.direction[GunwomanSprite.DirectionLeft] = true
+//                    self.sampleSprite.state = .idleLeft
                     break
                 case NSRightArrowFunctionKey:
-                    self.sampleSprite.removeAllActions()
-                    self.sampleSprite.direction[GunwomanSprite.DirectionRight] = true
-                    self.sampleSprite.state = .idleRight
+                    self.sampleSprite.fsm.enter(PlayerSprite.PlayerStateIdling.self)
+                    
+                    
+//                    self.sampleSprite.removeAllActions()
+//                    self.sampleSprite.direction[GunwomanSprite.DirectionRight] = true
+//                    self.sampleSprite.state = .idleRight
                     break
                 default:
                     break
@@ -122,7 +135,11 @@ extension TileMapScene {
                     }
                     break
                 case NSLeftArrowFunctionKey:
-                    self.sampleSprite.state = .walkLeft
+                    self.sampleSprite.direction = 270
+                    self.sampleSprite.fsm.enter(PlayerSprite.PlayerStateWalking.self)
+                    
+                    
+//                    self.sampleSprite.state = .walkLeft
                     
 //                    if let cam = self.localCamera {
 ////                        cam.run(SKAction.moveBy(x: -25.0, y: 0.0, duration: 0.5))
@@ -137,7 +154,11 @@ extension TileMapScene {
 //                    }
                     break
                 case NSRightArrowFunctionKey:
-                    self.sampleSprite.state = .walkRight
+                    self.sampleSprite.direction = 90
+                    self.sampleSprite.fsm.enter(PlayerSprite.PlayerStateWalking.self)
+                    
+                    
+//                    self.sampleSprite.state = .walkRight
                     
 //                    if let cam = self.localCamera {
 ////                        cam.run(SKAction.moveBy(x: 25.0, y: 0.0, duration: 0.5))
@@ -191,11 +212,12 @@ extension TileMapScene {
                 }
                 break
             case "q", "Q":
-                if self.sampleSprite.direction[GunwomanSprite.DirectionLeft] == true {
-                    self.sampleSprite.state = .attackLeft
-                } else if self.sampleSprite.direction[GunwomanSprite.DirectionRight] == true {
-                    self.sampleSprite.state = .attackRight
-                }
+                self.sampleSprite.fsm.enter(PlayerSprite.PlayerStateAttacking.self)
+//                if self.sampleSprite.direction[GunwomanSprite.DirectionLeft] == true {
+//                    self.sampleSprite.state = .attackLeft
+//                } else if self.sampleSprite.direction[GunwomanSprite.DirectionRight] == true {
+//                    self.sampleSprite.state = .attackRight
+//                }
                 break
             default:
                 break
